@@ -7,6 +7,7 @@ import EventsSection from "./components/EventsSection";
 import DomainEvents from "./components/DomainEvents";
 import Gallery from "./pages/Gallery";
 import TeamsOG from "./pages/TeamsOG";
+import Anoucenment from "./pages/anoucenment";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/events/:domain" element={<DomainEvents />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/TeamOG" element={<TeamsOG />} />
+        <Route path="/announcement" element={<Anoucenment />} />
       </Routes>
     </BrowserRouter>
   );
