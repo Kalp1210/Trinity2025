@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import EventsSection from "./components/EventsSection";
 import DomainEvents from "./components/DomainEvents";
 import Gallery from "./pages/Gallery";
+import TeamsOG from "./pages/TeamsOG";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/events" element={<EventsSection />} />
         <Route path="/events/:domain" element={<DomainEvents />} />
         <Route path="/gallery" element={<Gallery />} />
+        <Route path="/TeamOG" element={<TeamsOG />} />
       </Routes>
     </BrowserRouter>
   );
