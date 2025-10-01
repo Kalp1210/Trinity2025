@@ -8,6 +8,7 @@ import DomainEvents from "./components/DomainEvents";
 import Gallery from "./pages/Gallery";
 import TeamsOG from "./pages/TeamsOG";
 import Anoucenment from "./pages/anoucenment";
+import AdminDashboard from "./pages/AdminDashboard";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/TeamOG" element={<TeamsOG />} />
         <Route path="/announcement" element={<Anoucenment />} />
+        <Route path="/admin" element={<AdminDashboard />} />
       </Routes>
     </BrowserRouter>
   );
