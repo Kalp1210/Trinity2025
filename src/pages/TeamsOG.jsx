@@ -7,31 +7,31 @@ const TeamsOG = () => {
   const containerRef = useRef(null);
 
   const departments = [
-    {
-      name: "Mentors",
-      images: { array: [photo1, photo1, photo1], scale: "110" },
-      title: "Mentors",
-    },
-    {
-      name: "Conveners",
-      images: { array: [photo1, photo1, photo1], scale: "110" },
-      title: "Mentors",
-    },
-    {
-      name: "Technical Conveners",
-      images: { array: [photo1, photo1, photo1], scale: "110" },
-      title: "Mentors",
-    },
-    {
-      name: "Cultural Conveners",
-      images: { array: [photo1, photo1, photo1], scale: "110" },
-      title: "Mentors",
-    },
-    {
-      name: "Sports Conveners",
-      images: { array: [photo1, photo1, photo1], scale: "110" },
-      title: "Mentors",
-    },
+    // {
+    //   name: "Mentors",
+    //   images: { array: [photo1, photo1, photo1], scale: "110" },
+    //   title: "Mentors",
+    // },
+    // {
+    //   name: "Conveners",
+    //   images: { array: [photo1, photo1, photo1], scale: "110" },
+    //   title: "Mentors",
+    // },
+    // {
+    //   name: "Technical Conveners",
+    //   images: { array: [photo1, photo1, photo1], scale: "110" },
+    //   title: "Mentors",
+    // },
+    // {
+    //   name: "Cultural Conveners",
+    //   images: { array: [photo1, photo1, photo1], scale: "110" },
+    //   title: "Mentors",
+    // },
+    // {
+    //   name: "Sports Conveners",
+    //   images: { array: [photo1, photo1, photo1], scale: "110" },
+    //   title: "Mentors",
+    // },
     {
       name: "Chairperson",
       images: { array: ["/teams/TeamsImg/47.png"], scale: "105" },
@@ -50,23 +50,7 @@ const TeamsOG = () => {
       title: "Top Four",
     },
     {
-      name: "Secretary",
-      images: {
-        array: ["/teams/TeamsImg/40.png", "/teams/TeamsImg/41.png"],
-        scale: "105",
-      },
-      title: "Secretary",
-    },
-    {
-      name: "Treasurer",
-      images: {
-        array: ["/teams/TeamsImg/42.png", "/teams/TeamsImg/43.png"],
-        scale: "105",
-      },
-      title: "Secretary",
-    },
-    {
-      name: "Technical",
+      name: "Technical Secretary",
       images: {
         array: [
           "/teams/TeamsImg/12.png",
@@ -78,7 +62,7 @@ const TeamsOG = () => {
       title: "Secretary",
     },
     {
-      name: "Cultural",
+      name: "Cultural Secretary",
       images: {
         array: [
           "/teams/TeamsImg/37.png",
@@ -102,7 +86,24 @@ const TeamsOG = () => {
       title: "Secretary",
     },
     {
-      name: "Sports HOD",
+      name: "Secretary",
+      images: {
+        array: ["/teams/TeamsImg/40.png", "/teams/TeamsImg/41.png"],
+        scale: "105",
+      },
+      title: "Secretary",
+    },
+    {
+      name: "Treasurer",
+      images: {
+        array: ["/teams/TeamsImg/42.png", "/teams/TeamsImg/43.png"],
+        scale: "105",
+      },
+      title: "Secretary",
+    },
+
+    {
+      name: "Sports Head of Department",
       images: {
         array: [
           "/teams/TeamsImg/6.png",
@@ -114,7 +115,7 @@ const TeamsOG = () => {
       title: "HOD",
     },
     {
-      name: "Events",
+      name: "Events Vice Chairperson",
       images: {
         array: [
           "/teams/TeamsImg/15.png",
@@ -166,7 +167,7 @@ const TeamsOG = () => {
       title: "HOD",
     },
     {
-      name: "Editorial",
+      name: "Editorial Vice Chairperson",
       images: {
         array: ["/teams/TeamsImg/23.png", "/teams/TeamsImg/24.png"],
         scale: "105",
@@ -174,7 +175,7 @@ const TeamsOG = () => {
       title: "VCP",
     },
     {
-      name: "Publicity",
+      name: "Publicity Vice Chairperson",
       images: {
         array: [
           "/teams/TeamsImg/18.png",
@@ -202,7 +203,7 @@ const TeamsOG = () => {
       title: "HOD",
     },
     {
-      name: "Operations",
+      name: "Operations Vice Chairperson",
       images: {
         array: [
           "/teams/TeamsImg/29.png",
@@ -214,7 +215,7 @@ const TeamsOG = () => {
       title: "VCP",
     },
     {
-      name: "Security",
+      name: "Security Vice Chairperson",
       images: {
         array: ["/teams/TeamsImg/21.png", "/teams/TeamsImg/22.png"],
         scale: "105",
@@ -324,25 +325,23 @@ const TeamsOG = () => {
                   text-white font-semibold text-lg 
                   bg-black/20 backdrop-blur-md rounded-full w-fit mx-auto"
         >
-          {["All", "Mentors", "VCP", "HOD", "Secretary", "Top Four"].map(
-            (cat) => (
-              <button
-                key={cat}
-                onClick={() => {
-                  setFilter(cat);
-                  setCurrentIndex(0);
-                  window.scrollTo(0, 0);
-                }}
-                className={`whitespace-nowrap px-4 py-1 rounded-full transition ${
-                  filter === cat
-                    ? "bg-[#dbab6a] text-black"
-                    : "hover:text-[#dbab6a]"
-                }`}
-              >
-                {cat}
-              </button>
-            )
-          )}
+          {["Top Four", "Secretary", "VCP", "HOD"].map((cat) => (
+            <button
+              key={cat}
+              onClick={() => {
+                setFilter(cat);
+                setCurrentIndex(0);
+                window.scrollTo(0, 0);
+              }}
+              className={`whitespace-nowrap px-4 py-1 rounded-full transition ${
+                filter === cat
+                  ? "bg-[#dbab6a] text-black"
+                  : "hover:text-[#dbab6a]"
+              }`}
+            >
+              {cat}
+            </button>
+          ))}
         </div>
       </div>
 
